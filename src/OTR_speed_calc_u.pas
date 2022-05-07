@@ -1,5 +1,5 @@
 // Developed by Madebotix
-// Version 1.3
+// Version 1.5
 unit OTR_speed_calc_u;
 
 interface
@@ -44,7 +44,7 @@ implementation
 
 procedure TfrmSpeedCalc.btn4x4Click(Sender: TObject);
 begin
-  memPresets.Text := '    • 4X4 •                                    ' +
+  memPresets.Text := '    ï¿½ 4X4 ï¿½                                    ' +
     'Hurricane - 121.6                          ' +
     'Taurus - 114.6                             ' +
     'Defender - 111.8                           ' +
@@ -75,7 +75,7 @@ end;
 
 procedure TfrmSpeedCalc.btnOthersClick(Sender: TObject);
 begin
-  memPresets.Text := '   • Others •                                ' +
+  memPresets.Text := '   ï¿½ Others ï¿½                                ' +
     'Icarus - 163.6                             ' +
     'Voltage - 130.4                            ' +
     'Educator - 120.8                           ' +
@@ -92,7 +92,7 @@ end;
 
 procedure TfrmSpeedCalc.btnRallyClick(Sender: TObject);
 begin
-  memPresets.Text := '   • Rally •                                 ' +
+  memPresets.Text := '   ï¿½ Rally ï¿½                                 ' +
     'Spitfire - 125.8                           ' +
     'Lionheart - 122.4                          ' +
     'Stinger - 122.4                            ' +
@@ -105,7 +105,7 @@ end;
 
 procedure TfrmSpeedCalc.btnTrucksClick(Sender: TObject);
 begin
-  memPresets.Text := '   • Trucks •                                  ' +
+  memPresets.Text := '   ï¿½ Trucks ï¿½                                  ' +
     'Titan - 123.2                              ' +
     'Dachsund - 122.4                           ' +
     'Thunder - 115.3                            ' +
