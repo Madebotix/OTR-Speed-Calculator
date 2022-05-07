@@ -13,13 +13,16 @@ uses
 type
   TfrmSpeedCalc = class(TForm)
     edtTime: TEdit;
-    lblSpeed: TLabel;
     btnCalc: TButton;
     btnRally: TButton;
     btnOthers: TButton;
     btn4x4: TButton;
     btnTrucks: TButton;
-    Memo1: TMemo;
+    memPresets: TMemo;
+    edtDistance: TEdit;
+    lblInsTime: TLabel;
+    lblInsDist: TLabel;
+    pnlSpeed: TPanel;
     procedure btnCalcClick(Sender: TObject);
     procedure btnTrucksClick(Sender: TObject);
     procedure btnRallyClick(Sender: TObject);
@@ -33,7 +36,7 @@ type
 
 var
   frmSpeedCalc: TfrmSpeedCalc;
-  rTime, rSpeed, rDistance: real;
+  rTime, rSpeed, rRDistance, rFDistance: real;
 
 implementation
 
@@ -41,7 +44,7 @@ implementation
 
 procedure TfrmSpeedCalc.btn4x4Click(Sender: TObject);
 begin
-  Memo1.Text := '    • 4X4 •                                    ' +
+  memPresets.Text := '    • 4X4 •                                    ' +
     'Hurricane - 121.6                          ' +
     'Taurus - 114.6                             ' +
     'Defender - 111.8                           ' +
@@ -59,18 +62,20 @@ procedure TfrmSpeedCalc.btnCalcClick(Sender: TObject);
 begin
   // input
   rTime := StrToFloat(edtTime.Text);
+  rRDistance := StrToFloat(edtDistance.Text);
 
   // processing
-  rSpeed := (300 / rTime) * 6;
+  rFDistance := (rRDistance / 100) * 60;
+  rSpeed := (rFDistance / rTime) * 6;
 
   // output
-  lblSpeed.Caption := FloatToStrF(rSpeed, ffFixed, 8, 1) + ' km/h';
+  pnlSpeed.Caption := FloatToStrF(rSpeed, ffFixed, 8, 1) + ' km/h';
 
 end;
 
 procedure TfrmSpeedCalc.btnOthersClick(Sender: TObject);
 begin
-  Memo1.Text := '   • Others •                                ' +
+  memPresets.Text := '   • Others •                                ' +
     'Icarus - 163.6                             ' +
     'Voltage - 130.4                            ' +
     'Educator - 120.8                           ' +
@@ -87,7 +92,7 @@ end;
 
 procedure TfrmSpeedCalc.btnRallyClick(Sender: TObject);
 begin
-  Memo1.Text := '   • Rally •                                 ' +
+  memPresets.Text := '   • Rally •                                 ' +
     'Spitfire - 125.8                           ' +
     'Lionheart - 122.4                          ' +
     'Stinger - 122.4                            ' +
@@ -100,7 +105,7 @@ end;
 
 procedure TfrmSpeedCalc.btnTrucksClick(Sender: TObject);
 begin
-  Memo1.Text := '   • Trucks •                                  ' +
+  memPresets.Text := '   • Trucks •                                  ' +
     'Titan - 123.2                              ' +
     'Dachsund - 122.4                           ' +
     'Thunder - 115.3                            ' +
