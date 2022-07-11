@@ -1,4 +1,4 @@
-# OTR SC [Speed Calculator]
+# OTR Speed Calculator for Windows
 A simple tool to work out the top speed of vehicles in Off The Road
 
-**[Latest Binary](https://github.com/Madebotix/OTR-Speed-Calculator/releases)**
+**[Latest Release](https://github.com/OTR-Speed-Calculator/OTR-Speed-Calculator/releases/latest)**
