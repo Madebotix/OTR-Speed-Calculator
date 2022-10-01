@@ -8,6 +8,6 @@
 [![Downloads](https://img.shields.io/github/downloads/OTR-Speed-Calculator/windows/total)](https://github.com/OTR-Speed-Calculator/windows/releases)
 [![Version](https://img.shields.io/github/v/release/OTR-Speed-Calculator/windows?display_name=tag)](https://github.com/OTR-Speed-Calculator/windows/releases/latest)
 
-Tool to work out the top speed of vehicles in OTR [Windows Binary]
+Tool to work out the top speed of vehicles in OTR [Windows Source]
 
 </div>
